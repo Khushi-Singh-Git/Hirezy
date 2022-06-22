@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+{% load static %}
+{% load crispy_forms_tags %}
+<html>
+	<head>
+		<title>login_candidate</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href= {% static 'home/css/main.css' %} />
+		<noscript><link rel="stylesheet" href= {% static 'home/css/noscript.css' %} /></noscript>
+	</head>
+	<body class="is-preload" style="background-image:url( {% static 'home/images/back.jpg' %}); background-size:cover;
+	background-repeat:no-repeat">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href={% url 'homeclick' %} class="logo">
+									<span class="symbol"><img src= {% static 'home/images/mylogo.png' %} alt="" /></span><span class="title">Hirezy</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href= {% url 'homeclick' %}>Home</a></li>
+							<li><a href= {% url 'applicantsignup' %}>Jobs</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Sign Up</h1>
+							<div class="inner">
+								
+								<section>
+									<form method="post" action="#">
+                                        {% csrf_token %}
+										
+										<!-- <div class="row gtr-uniform">
+											<div class="col-6 col-12-xsmall">
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-xsmall">
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<select name="demo-category" id="demo-category">
+													<option value="">- Category -</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="col-12">
+												<textarea name="demo-message" id="demo-message" placeholder="Why are you a sustainibility master?" rows="6"></textarea>
+											</div> -->
+
+											<div class="col-12">
+                                                {{userForm|crispy}}
+                                                {{applicantForm|crispy}}
+												<ul class="actions">
+													<li><input type="submit" value="Submit" class="primary" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</section>
+						</div>
+					</div>
+
+
+		<!-- Scripts -->
+		<script src= {% static 'home/js/jquery.min.js' %}></script>
+		<script src= {% static 'home/js/browser.min.js' %}></script>
+		<script src= {% static 'home/js/breakpoints.min.js' %}></script>
+		<script src= {% static 'home/js/util.js' %} ></script>
+		<script src= {% static 'home/js/main.js' %} ></script>
+
+	</body>
+</html>

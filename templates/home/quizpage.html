@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+{% load static %}
+
+
+<html>
+	<head>
+		<title>Questionnaire</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href= {% static 'home/css/main.css' %}  />
+		<noscript><link rel="stylesheet" href= {% static 'home/css/noscript.css' %} /></noscript>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>
+			function myFunction(id) {
+				$.post('/quizpage/', { answer: id }, function (response) {
+					// alert("answered");
+					// $("#mypar").html(response.amount);
+				});
+			}
+		</script>
+		
+	</head>
+	
+	
+
+	<body class="is-preload" style="background-image:url( {% static 'home/images/back.jpg' %}); background-size:cover;
+	background-repeat:no-repeat">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href={% url 'homeclick' %} class="logo">
+									<span class="symbol"><img src= {% static 'home/images/mylogo.png' %}  alt="" /></span><span class="title">Hirezy</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href={% url 'homeclick' %}>Home</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Think you are a sustainability champion?</h1>
+                            <h3>Find out by answering these questions</h3>
+							<div class="inner">
+								<section class="ques">
+                                    <h3>Ques: {{question}}</h3>
+                                </section>
+								
+
+
+  </div>
+  
+
+								<section class="tiles">
+									
+										
+											<article class="style1">
+												<span class="image">
+													<img src= {% static 'home/images/pic01.jpg' %} alt=""  />	
+												</span>  
+											<a><form action="" method="POST">
+												{% csrf_token %}
+											  <input type="hidden" name="answer" value="1" />
+											  <button type="submit" name="ID" class="btn btn-primary">Option 1
+											</button>
+
+										</form>
+
+										</a>
+									</article>
+
+
+									<article class="style1">
+										<span class="image">
+											<img src= {% static 'home/images/pic01.jpg' %} alt=""  />	
+										</span>  
+									<a><form action="" method="POST">
+										{% csrf_token %}
+									  <input type="hidden" name="answer" value="2" />
+									  <button type="submit" name="ID2" class="btn btn-primary">Option 2
+									</button>
+
+								</form>
+
+								</a>
+							</article>
+
+										
+				<!--
+									<article class="style3">
+										<span class="image">
+											<img src="images/pic03.jpg" alt="" />
+										</span>
+										<a href="generic.html">
+											<h2>Feugiat</h2>
+											<div class="content">
+												<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											</div>
+										</a>
+									</article>-->
+						</div>
+                        <br></br>
+                        <a href="" class="button small">Submit</a>
+    
+                        <a href="" class="button small">Next Question</a>
+
+					</div>
+
+
+		<!-- Scripts -->
+		<script src= {% static 'home/js/jquery.min.js' %}></script>
+		<script src= {% static 'home/js/browser.min.js' %}></script>
+		<script src= {% static 'home/js/breakpoints.min.js' %}></script>
+		<script src= {% static 'home/js/util.js' %} ></script>
+		<script src= {% static 'home/js/main.js' %} ></script>
+
+	</body>
+</html>

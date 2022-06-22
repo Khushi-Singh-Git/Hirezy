@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing Page using HTML, CSS & Javascript</title>
+    <link rel="stylesheet" href="../../static/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        const jobs = [
+          {
+            role: "Role 1",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo nulla orci, commodo rhoncus magna maximus ut. Sed efficitur justo sagittis varius vulputate.",
+            postedBy: "Mafiosis1",
+            roleType: "hr",
+            imgLink:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaX3QtyteXceaOOOdYtBTs6Tvb9_YDiKOPZw&usqp=CAU",
+          },
+          {
+            role: "Role 2",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo nulla orci, commodo rhoncus magna maximus ut. Sed efficitur justo sagittis varius vulputate.",
+            postedBy: "Mafiosis2",
+            roleType: "developer",
+            imgLink:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaX3QtyteXceaOOOdYtBTs6Tvb9_YDiKOPZw&usqp=CAU",
+          },
+          {
+            role: "Role 3",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo nulla orci, commodo rhoncus magna maximus ut. Sed efficitur justo sagittis varius vulputate.",
+            postedBy: "Mafiosis3",
+            roleType: "hr",
+            imgLink:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaX3QtyteXceaOOOdYtBTs6Tvb9_YDiKOPZw&usqp=CAU",
+          },
+          {
+            role: "Role 4",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo nulla orci, commodo rhoncus magna maximus ut. Sed efficitur justo sagittis varius vulputate.",
+            postedBy: "Mafiosis4",
+            roleType: "developer",
+            imgLink:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaX3QtyteXceaOOOdYtBTs6Tvb9_YDiKOPZw&usqp=CAU",
+          },
+          {
+            role: "Role 5",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo nulla orci, commodo rhoncus magna maximus ut. Sed efficitur justo sagittis varius vulputate.",
+            postedBy: "Mafiosis5",
+            roleType: "hr",
+            imgLink:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaX3QtyteXceaOOOdYtBTs6Tvb9_YDiKOPZw&usqp=CAU",
+          },
+          {
+            role: "Role 6",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo nulla orci, commodo rhoncus magna maximus ut. Sed efficitur justo sagittis varius vulputate.",
+            postedBy: "Mafiosis5",
+            roleType: "developer",
+            imgLink:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaX3QtyteXceaOOOdYtBTs6Tvb9_YDiKOPZw&usqp=CAU",
+          },
+          {
+            role: "Role 7",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo nulla orci, commodo rhoncus magna maximus ut. Sed efficitur justo sagittis varius vulputate.",
+            postedBy: "Mafiosis7",
+            roleType: "hr",
+            imgLink:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaX3QtyteXceaOOOdYtBTs6Tvb9_YDiKOPZw&usqp=CAU",
+          },
+          {
+            role: "Role 8",
+            description:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo nulla orci, commodo rhoncus magna maximus ut. Sed efficitur justo sagittis varius vulputate.",
+            postedBy: "Mafiosis8",
+            roleType: "hr",
+            imgLink:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaX3QtyteXceaOOOdYtBTs6Tvb9_YDiKOPZw&usqp=CAU",
+          },
+        ];
+
+        const container = document.getElementById("jobs");
+        jobs.forEach((result, idx) => {
+          const card = document.createElement("div");
+          //card.classList = "card-body";
+          console.log(result);
+
+          // Construct card content
+          const content = `
+            <div class="card" id="job-${idx}" style="width:250px;height:550px;dispaly:flex">
+                <img src="${result.imgLink}"><br /><br />
+                <h3>${result.role}</h3><br />
+                <p>${result.description}</p><br />
+                <p>Posted by: ${result.postedBy}</p><br />
+                <button class="button-bg-like" id="like-${idx}">Like</button>
+                <button class="button-bg-dislike" id="dislike-${idx}">Dislike</button>
+        </div>
+        `;
+          container.innerHTML += content;
+        });
+
+        var children = container.getElementsByTagName("div");
+        const childDivs = container.querySelectorAll(":scope > div");
+
+        const arrayLength = childDivs.length;
+        console.log(arrayLength);
+        for (var i = 0; i < arrayLength; i++) {
+          const name = childDivs[i].getAttribute("id");
+          if (i != 2) childDivs[i].style.visibility = "hidden";
+          const buttonChildren =
+            childDivs[i].querySelectorAll(":scope > button");
+          console.log(name);
+          console.log(buttonChildren[0].getAttribute("id"));
+          console.log(buttonChildren[1].getAttribute("id"));
+          buttonChildren[1].addEventListener("click", function () {
+            console.log("name: ", name);
+            console.log("this", this);
+            $("#" + name)
+              .addClass("rotate-right")
+              .delay(700)
+              .fadeOut(1);
+            //$("#" + name).append('<div class="status dislike">Dislike!</div>');
+            if ($("#" + name).next())
+              $("#" + name)
+                .next()
+                .css("visibility", "visible");
+
+            //$('#'+name).next().removeClass('rotate-left rotate-right').fadeIn(400);
+          });
+          buttonChildren[0].addEventListener("click", function () {
+            $("#" + name)
+              .addClass("rotate-left")
+              .delay(700)
+              .fadeOut(1);
+            //$("#" + name).append('<div class="status like">Like!</div>');
+            //$('#'+name).next().removeClass('rotate-left rotate-right').fadeIn(400);
+            if ($("#" + name).next())
+              $("#" + name)
+                .next()
+                .css("visibility", "visible");
+            const matchRequestTo = $("#" + name).attr("id");
+            //const matchRequestReceiver = $('#'+name).attr('');
+            // createMatchRequest(matchRequestTo, matchRequestReceiver);
+            // setTimeout(() => {
+            //     shouldHideMainCard();
+            // }, 1100)
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <br />
+    <h1 style="text-align: center; width: 1410px">Jobs</h1>
+    <div
+      id="jobs"
+      style="display: flex; flex-direction: row; flex-wrap: wrap"
+    ></div>
+  </body>
+</html>

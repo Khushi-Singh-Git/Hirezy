@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+{% load static %}
+
+<html>
+	<head>
+		<title>Hirerer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href= {% static 'home/css/main.css' %} />
+		<noscript><link rel="stylesheet" href= {% static 'homecss/noscript.css' %} /></noscript>
+	</head>
+	<body class="is-preload" style="background-image:url( {% static 'home/images/back.jpg' %}); background-size:cover;
+	background-repeat:no-repeat">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href= {% url 'homeclick' %} class="logo">
+									<span class="symbol"><img src= {% static 'home/images/mylogo.png' %} alt="" /></span><span class="title">Hirezy</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href= {% url 'homeclick' %}>Home</a></li>
+							<li><a href= "">Post Job</a></li>
+							<li><a href="#">View profiles</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Welcome Hirers!</h1>
+							<div class="inner">
+								
+								<section class="tiles">
+									<article class="style1">
+										<span class="image">
+											<img src= {% static 'home/images/pic01.jpg' %} alt="" />
+										</span>
+										<a href= "">
+											<h2>POST A JOB</h2>
+											<div class="content">
+												<p>If you want to post a job opening, please click here.</p>
+											</div>
+										</a>
+									</article>
+									<article class="style2">
+										<span class="image">
+											<img src= {% static 'home/images/pic01.jpg' %} alt="" />
+										</span>
+										<a href="#">
+											<h2>VIEW PROFILES</h2>
+											<div class="content">
+												<p>If you want to view candidate profiles, please click here.</p>
+											</div>
+										</a>
+									</article>
+									<!--
+									<article class="style3">
+										<span class="image">
+											<img src="images/pic03.jpg" alt="" />
+										</span>
+										<a href="generic.html">
+											<h2>Feugiat</h2>
+											<div class="content">
+												<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											</div>
+										</a>
+									</article>-->
+						</div>
+					</div>
+
+
+		<!-- Scripts -->
+		<script src= {% static 'home/js/jquery.min.js' %}></script>
+		<script src= {% static 'home/js/browser.min.js' %}></script>
+		<script src= {% static 'home/js/breakpoints.min.js' %}></script>
+		<script src= {% static 'home/js/util.js' %} ></script>
+		<script src= {% static 'home/js/main.js' %} ></script>
+
+	</body>
+</html>
