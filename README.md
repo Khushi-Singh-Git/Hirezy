@@ -1,5 +1,8 @@
 # Hirezy: Hiring made easy
 
+![logo](https://user-images.githubusercontent.com/107871742/175231660-4f0bdfcf-be70-40d4-b83e-3e7ce0d3dd13.png)
+
+
 :gem: Hirezy is a hiring WebApp for NGOs to hire manpower with suitable skill sets.               
 
  ![1](https://user-images.githubusercontent.com/107871742/174871531-f8e221d7-9d3a-40fe-90a6-ea009b2f7312.png)
